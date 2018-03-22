@@ -22,6 +22,8 @@ for (i in filename){
 }
 
 #uav <- stream_in(file("2016-06-20-0245Z.json"))
-
-library(xlsx)
-write.xlsx(uav_xls, "b:/UAV_Data/uav_1.xlsx")
+#options(java.parameters = "-Xmx1000m")
+#library(xlsx)
+#write.xlsx(uav_xls, "b:/UAV_Data/uav_1.xlsx")
+write.table(uav_xls, file = "uav_2.txt", sep = "\t",
+            row.names = TRUE, col.names = NA)
